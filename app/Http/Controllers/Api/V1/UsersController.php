@@ -32,6 +32,7 @@ class UsersController extends Controller
     }
 
     public function update(UsersRequest $request, Users $user){
+        
         $user->update($request->validated());
         return response()->json("User Updated");
     }
